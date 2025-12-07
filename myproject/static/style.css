@@ -1,0 +1,191 @@
+/* ------------------ Global Styles ------------------ */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #f3f6fa;
+}
+
+/* ------------------ Navbar ------------------ */
+nav {
+    background: #2b2d42;
+    padding: 15px 25px;
+    display: flex;
+    gap: 25px;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.2);
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #ef233c;
+    border-bottom: 2px solid #ef233c;
+}
+
+/* ------------------ Container ------------------ */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 25px;
+}
+
+/* ------------------ Headers ------------------ */
+h2 {
+    text-align: center;
+    color: #2b2d42;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* ------------------ Table Styling ------------------ */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 5px 16px rgba(0,0,0,0.12);
+}
+
+thead th {
+    background: #2b2d42;
+    color: #fff;
+    padding: 14px;
+    font-size: 15px;
+    letter-spacing: 0.6px;
+}
+
+tbody td {
+    padding: 14px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+tbody tr:hover {
+    background: #edf2f4;
+    transition: 0.2s ease-in-out;
+}
+
+/* ------------------ Action Buttons (New) ------------------ */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 7px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.2s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Icons inside buttons */
+.btn i {
+    font-size: 15px;
+}
+
+/* Edit Button */
+.btn-edit {
+    background: #0077b6;
+}
+.btn-edit:hover {
+    background: #023e8a;
+    box-shadow: 0px 0px 6px rgba(0,119,182,0.6);
+}
+
+/* Delete Button */
+.btn-delete {
+    background: #d90429;
+}
+.btn-delete:hover {
+    background: #9d0208;
+    box-shadow: 0px 0px 6px rgba(217,4,41,0.6);
+}
+
+/* Restore Button */
+.btn-restore {
+    background: #28a745;
+}
+.btn-restore:hover {
+    background: #1e7e34;
+    box-shadow: 0px 0px 6px rgba(40,167,69,0.6);
+}
+
+/* Permanent Delete */
+.btn-permanent {
+    background: #6c757d;
+}
+.btn-permanent:hover {
+    background: #565e64;
+    box-shadow: 0px 0px 6px rgba(108,117,125,0.6);
+}
+
+/* ------------------ No Data Row ------------------ */
+.no-data {
+    text-align: center;
+    padding: 18px;
+    font-size: 16px;
+    color: #6c757d;
+}
+
+/* ------------------ Form Styling ------------------ */
+form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 14px rgba(0,0,0,0.15);
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    border: 1px solid #cfd3d8;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: 0.2s ease;
+}
+
+input:focus {
+    border-color: #2b2d42;
+    box-shadow: 0px 0px 6px rgba(43,45,66,0.4);
+}
+
+/* Submit Button */
+button {
+    margin-top: 18px;
+    width: 100%;
+    padding: 14px;
+    background: #2b2d42;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover {
+    background: #ef233c;
+}
+
+/* ------------------ Responsive ------------------ */
+@media (max-width: 768px) {
+    table {
+        font-size: 14px;
+    }
+    .btn {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}

@@ -1,0 +1,48 @@
+{% extends "main.html" %}
+{% block content %}
+
+<h2 class="page-title">Deleted Student History</h2>
+
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>Student Number</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Field</th>
+            <th>GPA</th>
+            <th>Deleted At</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+    {% for s in history %}
+        <tr>
+            <td>{{ s.student_number }}</td>
+            <td>{{ s.first_name }} {{ s.last_name }}</td>
+            <td>{{ s.email }}</td>
+            <td>{{ s.field_of_study }}</td>
+            <td>{{ s.gpa }}</td>
+            <td>{{ s.deleted_at|date:"Y-m-d H:i" }}</td>
+
+            <td class="action-buttons">
+                <a class="btn btn-restore" href="{% url 'restore' s.id %}">
+                    <i class="fa fa-undo"></i> Restore
+                </a>
+
+                <a class="btn btn-permanent" href="{% url 'permanent_delete' s.id %}">
+                    <i class="fa fa-ban"></i> Delete
+                </a>
+            </td>
+
+        </tr>
+    {% empty %}
+        <tr>
+            <td colspan="7" class="no-data">No deleted records found.</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

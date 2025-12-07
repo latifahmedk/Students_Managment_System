@@ -1,0 +1,84 @@
+/* ---------- Auth Page Background ---------- */
+.auth-body {
+    background: linear-gradient(135deg, #2b2d42, #8d99ae);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* ---------- Auth Form ---------- */
+.auth-box {
+    width: 100%;
+    max-width: 420px;
+    padding: 35px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.25);
+    text-align: center;
+}
+
+.auth-box h2 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+/* ---------- Input Fields ---------- */
+.auth-box input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.auth-box input:focus {
+    box-shadow: 0 0 6px rgba(255,255,255,0.7);
+}
+
+/* ---------- Auth Button ---------- */
+.auth-btn {
+    width: 100%;
+    margin-top: 20px;
+    background: #ef233c;
+    padding: 12px;
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.auth-btn:hover {
+    background: #d90429;
+}
+
+/* ---------- Links ---------- */
+.auth-box a {
+    color: #fff;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+/* ---------- Error Messages ---------- */
+.auth-alert {
+    background: rgba(255, 0, 0, 0.7);
+    color: white;
+    padding: 8px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+/* ---------- Responsive ---------- */
+@media(max-width: 480px) {
+    .auth-box {
+        padding: 25px;
+    }
+}

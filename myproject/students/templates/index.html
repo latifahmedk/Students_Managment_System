@@ -1,0 +1,42 @@
+{% extends "main.html" %}
+
+{% block content %}
+<h2>Student List</h2>
+
+<table border="1" cellpadding="10" width="100%">
+    <tr>
+        <th>ID</th>
+        <th>Student Roll No</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Field of Study</th>
+        <th>GPA</th>
+        <th>Actions</th>
+    </tr>
+
+    {% for s in students %}
+    <tr>
+        <td>{{ s.id }}</td>
+        <td>{{ s.student_number }}</td>
+        <td>{{ s.first_name }}</td>
+        <td>{{ s.last_name }}</td>
+        <td>{{ s.email }}</td>
+        <td>{{ s.field_of_study }}</td>
+        <td>{{ s.gpa }}</td>
+
+        <td class="action-buttons">
+            <a class="btn btn-edit" href="{% url 'edit' s.id %}">
+                <i class="fa fa-edit"></i> Edit
+            </a>
+
+            <a class="btn btn-delete" href="{% url 'delete' s.id %}"
+              onclick="return confirm('Delete this student?');">
+                <i class="fa fa-trash"></i> Delete
+            </a>
+        </td>
+
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
